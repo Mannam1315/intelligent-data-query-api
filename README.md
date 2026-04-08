@@ -4,7 +4,16 @@ This project demonstrates a practical AI-enabled backend system that allows user
 
 ## 🚀 Project Overview
 
-The application is designed to help users explore structured data without writing SQL manually. Instead of querying databases directly, users can ask plain-English questions and retrieve contextually relevant results.
+The application is designed to help users explore structured data without writing SQL manually. Instead of querying datasets directly, users can ask plain-English questions and retrieve contextually relevant results.
+
+## 🔧 Core Capabilities
+
+* preprocesses structured CSV data
+* converts rows into searchable vector documents
+* stores embeddings in FAISS
+* exposes REST APIs using FastAPI
+* supports experiment tracking through MLflow
+* packaged for deployment using Docker
 
 ## 📂 Project Structure
 
@@ -12,7 +21,7 @@ The application is designed to help users explore structured data without writin
 * `pipeline/` → preprocessing and embedding logic
 * `rag/` → retrieval flow
 * `ml/` → MLflow utilities
-* `data/` → sample dataset
+* `data/` → sample structured dataset
 
 ## ⚙️ Tech Stack
 
@@ -24,6 +33,27 @@ The application is designed to help users explore structured data without writin
 * MLflow
 * Docker
 
-## 📌 Why I Built This
+## ▶️ How to Run Locally
 
-I wanted to build a project that combines backend engineering, data processing, and practical generative AI patterns in a way that feels closer to a real internal tool than a generic chatbot demo.
+```bash
+pip install -r requirements.txt
+uvicorn api.main:app --reload
+```
+
+Then open:
+
+```bash
+http://127.0.0.1:8000/query?q=Which product had highest sales in February?
+```
+
+## 📌 Future Enhancements
+
+* integrate LLM summarization on top of retrieval
+* connect to real SQL or NoSQL sources
+* add CI/CD pipeline
+* deploy on AWS
+* add authentication and usage logging
+
+## 💡 Why I Built This
+
+I wanted to build a project that combines backend engineering, data processing, and practical generative AI patterns in a way that feels close to a real production use case rather than a generic chatbot demo.
