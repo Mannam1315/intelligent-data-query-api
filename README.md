@@ -33,6 +33,21 @@ The application is designed to help users explore structured data without writin
 * MLflow
 * Docker
 
+## GCP ADK / Agent Workflow Exploration
+
+As part of exploring modern AI agent architectures, I implemented a lightweight example demonstrating tool-based agent workflows inspired by GCP ADK and Agent Engine concepts.
+
+This includes:
+
+* Query-to-tool routing logic
+* Structured response handling
+* Modular agent design patterns
+
+This helped me understand how backend APIs, retrieval systems, and agent orchestration can be combined in real-world applications.
+
+📁 See: `examples/gcp_adk_currency_agent.py`
+
+
 ## ▶️ How to Run Locally
 
 ```bash
