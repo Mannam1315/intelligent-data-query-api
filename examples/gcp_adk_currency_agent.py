@@ -35,6 +35,8 @@ def get_exchange_rate(base: str, target: str) -> Dict[str, str]:
 def run_agent(user_query: str) -> Dict[str, str]:
     query = user_query.lower()
 
+    if "convert" in query:
+        return {"message": "Conversion feature coming soon"}
     if "usd" in query and "inr" in query:
         return get_exchange_rate("USD", "INR")
     if "eur" in query and "usd" in query:
